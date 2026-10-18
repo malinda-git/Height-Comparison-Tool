@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Height Comparison Tool — Compare Heights Visually</title>
+  <meta name="description" content="Compare two or more heights visually in centimeters, meters, feet and inches. Free, simple and mobile-friendly height comparison tool.">
+  <meta name="theme-color" content="#101828">
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="Height Comparison Tool">
+  <meta property="og:description" content="Compare heights visually and see the difference in cm, feet and inches.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Height Comparison Tool",
+    "applicationCategory":"UtilityApplication",
+    "operatingSystem":"Any",
+    "description":"A free browser-based tool to compare people's heights visually."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Height Compare home">
+      <span class="brand-mark" aria-hidden="true">↕</span>
+      <span>Height<span class="brand-accent">Compare</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#tool">Compare</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE TOOL</p>
+      <h1>Compare heights.<br><span>See the difference.</span></h1>
+      <p class="hero-copy">Add people, enter their heights and compare them side by side with a simple visual guide.</p>
+      <a class="primary-link" href="#tool">Start comparing <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="tool" class="tool-section" aria-labelledby="tool-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HEIGHT COMPARISON</p>
+          <h2 id="tool-title">Build your comparison</h2>
+        </div>
+        <span class="privacy-note"><span aria-hidden="true">●</span> Calculated on your device</span>
+      </div>
+
+      <div class="workspace">
+        <div class="people-panel">
+          <div id="people-list" class="people-list" aria-live="polite"></div>
+          <div class="panel-actions">
+            <button type="button" class="secondary-button" id="add-person">＋ Add person</button>
+            <button type="button" class="text-button" id="reset">Reset</button>
+          </div>
+          <p class="field-help">You can compare up to 6 people. Heights must be between 50 and 250 cm.</p>
+        </div>
+
+        <div class="visual-panel">
+          <div class="visual-topline">
+            <span>VISUAL PREVIEW</span>
+            <button type="button" class="text-button" id="download-image">Download result</button>
+          </div>
+          <div id="visual-stage" class="visual-stage" role="img" aria-label="Visual height comparison">
+            <div class="empty-state">Your comparison will appear here.</div>
+          </div>
+          <div id="result-summary" class="result-summary" aria-live="polite"></div>
+          <p class="disclaimer">Illustrations are proportional height guides, not exact body measurements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid" aria-label="How it works">
+      <article class="info-card">
+        <span class="info-number">01</span>
+        <h3>Add people</h3>
+        <p>Give each person a name and choose a height unit that feels familiar.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-number">02</span>
+        <h3>Compare visually</h3>
+        <p>The silhouettes use the same scale, so differences are easy to see.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-number">03</span>
+        <h3>Save your result</h3>
+        <p>Download a PNG snapshot to keep or share your comparison.</p>
+      </article>
+    </section>
+
+    <section class="content-section">
+      <h2>How does height comparison work?</h2>
+      <p>Enter each person's height and the tool converts the value to centimeters for a consistent comparison. The tallest person sets the visual scale, while each other silhouette is drawn proportionally. The difference between two people is calculated from their entered heights.</p>
+      <h2>Height conversion guide</h2>
+      <p>One foot equals 12 inches, and one inch equals 2.54 centimeters. To convert feet and inches to centimeters, multiply the total inches by 2.54. This tool performs the conversion automatically.</p>
+      <h2>Is my information saved?</h2>
+      <p>No account is needed. This version calculates heights in your browser and does not send the names or heights you enter to a server. If you refresh the page, your comparison may reset.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">↕</span><span>Height<span class="brand-accent">Compare</span></span></a>
+    <p>Simple tools for everyday comparisons.</p>
+    <nav aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <small>© <span id="year"></span> HeightCompare. All rights reserved.</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
